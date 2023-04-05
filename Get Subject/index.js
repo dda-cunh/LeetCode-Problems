@@ -20,6 +20,6 @@ if (!url) {
     const links = document.querySelectorAll('a');
     links.forEach(link => link.removeAttribute('href'));
   });
-  await page.pdf({ path: outputFilePath, format: 'A3'});
+  await page.pdf({ path: outputFilePath, width: '148mm', height: '297mm', printBackground: true});
   await browser.close();
 })();
